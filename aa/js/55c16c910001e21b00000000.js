@@ -69,11 +69,17 @@ var Qixi = function() {
         }
         return "animationend"
     })();
-    if (confi.audio.enable) {
+     $("body").on("click",function(){
         var audio1 = Hmlt5Audio(confi.audio.playURl);
         audio1.end(function() {
             Hmlt5Audio(confi.audio.cycleURL, true)
         })
+    })
+    if (confi.audio.enable) {
+        
+    }
+    if (confi.audio.enable) {
+      
     }
     var swipe = Swipe(container);
     function scrollTo(time, proportionX) {
