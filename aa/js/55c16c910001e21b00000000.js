@@ -69,18 +69,31 @@ var Qixi = function() {
         }
         return "animationend"
     })();
-     $("body").on("click",function(){
-        var audio1 = Hmlt5Audio(confi.audio.playURl);
-        audio1.end(function() {
+     var audio1="";
+    if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        console.log('手机');
+        $("body").on("click",function(){
+        if(audio1=="")
+        {
+            audio1 = Hmlt5Audio(confi.audio.playURl);
+            audio1.end(function() {
             Hmlt5Audio(confi.audio.cycleURL, true)
-        })
-    })
-    if (confi.audio.enable) {
+            })
+        }else{
+            return false;
+        }
         
+    })
+    }else{
+        if (confi.audio.enable) {
+            audio1 = Hmlt5Audio(confi.audio.playURl);
+            audio1.end(function() {
+            Hmlt5Audio(confi.audio.cycleURL, true)
+            })
+        }
+
     }
-    if (confi.audio.enable) {
-      
-    }
+ 
     var swipe = Swipe(container);
     function scrollTo(time, proportionX) {
         var distX = visualWidth * proportionX;
