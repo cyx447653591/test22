@@ -74,7 +74,7 @@ var Qixi = function() {
     if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
        
         $("body").on("click",function(){
-            
+              alert("1111");
         if(audio1=="")
         {
             alert("播放");
