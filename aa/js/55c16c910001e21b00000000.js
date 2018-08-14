@@ -72,12 +72,12 @@ var Qixi = function() {
      var audio1="";
      
     if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        alert("333");
+       
         $("#content").on("click",function(){
-              alert("1111");
+            
         if(audio1=="")
         {
-            alert("播放");
+           
             audio1 = Hmlt5Audio(confi.audio.playURl);
             audio1.end(function() {
             Hmlt5Audio(confi.audio.cycleURL, true)
@@ -88,7 +88,7 @@ var Qixi = function() {
         
     })
     }else{
-           alert("电脑");
+          
         if (confi.audio.enable) {
             audio1 = Hmlt5Audio(confi.audio.playURl);
             audio1.end(function() {
