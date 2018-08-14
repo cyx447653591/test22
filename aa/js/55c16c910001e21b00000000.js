@@ -72,7 +72,7 @@ var Qixi = function() {
      var audio1="";
      
     if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-       
+        alert("222");
         $("body").on("click",function(){
               alert("1111");
         if(audio1=="")
