@@ -70,13 +70,14 @@ var Qixi = function() {
         return "animationend"
     })();
      var audio1="";
-     alert(navigator.userAgent);
+     
     if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        console.log('手机');
-        alert("手机");
+       
         $("body").on("click",function(){
+            
         if(audio1=="")
         {
+            alert("播放");
             audio1 = Hmlt5Audio(confi.audio.playURl);
             audio1.end(function() {
             Hmlt5Audio(confi.audio.cycleURL, true)
