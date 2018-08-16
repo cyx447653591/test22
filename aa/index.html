@@ -100,7 +100,12 @@
       document.getElementById('audio').play();
    document.addEventListener("WeixinJSBridgeReady", function() {
     // 音乐自动播放
-        document.getElementById('audio').play();
+    var audio1=document.getElementById('audio');
+        audio1.play();
+    var audio2=document.getElementById('audio2');
+    audio1.end(function(){
+        audio2.play();
+    })
    }, false);
     </script>
 </html>
