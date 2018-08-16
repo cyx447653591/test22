@@ -69,34 +69,34 @@ var Qixi = function() {
         }
         return "animationend"
     })();
-     var audio1="";
+//      var audio1="";
      
-    if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+//     if(/iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
        
-        $("#content").on("click",function(){
+//         $("#content").on("click",function(){
             
-        if(audio1=="")
-        {
+//         if(audio1=="")
+//         {
            
-            audio1 = Hmlt5Audio(confi.audio.playURl);
-            audio1.end(function() {
-            Hmlt5Audio(confi.audio.cycleURL, true)
-            })
-        }else{
-            return false;
-        }
+//             audio1 = Hmlt5Audio(confi.audio.playURl);
+//             audio1.end(function() {
+//             Hmlt5Audio(confi.audio.cycleURL, true)
+//             })
+//         }else{
+//             return false;
+//         }
         
-    })
-    }else{
+//     })
+//     }else{
           
-        if (confi.audio.enable) {
-            audio1 = Hmlt5Audio(confi.audio.playURl);
-            audio1.end(function() {
-            Hmlt5Audio(confi.audio.cycleURL, true)
-            })
-        }
+//         if (confi.audio.enable) {
+//             audio1 = Hmlt5Audio(confi.audio.playURl);
+//             audio1.end(function() {
+//             Hmlt5Audio(confi.audio.cycleURL, true)
+//             })
+//         }
 
-    }
+//     }
  
     var swipe = Swipe(container);
     function scrollTo(time, proportionX) {
