@@ -106,6 +106,7 @@
     
     var is_playFinish = setInterval(function(){
         if(audio1.ended){
+            alert("111");
         audio2.play();
         window.clearInterval(is_playFinish);
         }
