@@ -103,9 +103,14 @@
     var audio1=document.getElementById('audio');
         audio1.play();
     var audio2=document.getElementById('audio2');
-    audio1.end(function(){
+    
+    var is_playFinish = setInterval(function(){
+        if(audio1.ended){
         audio2.play();
-    })
+        window.clearInterval(is_playFinish);
+        }
+        }, 10);
+
    }, false);
     </script>
 </html>
