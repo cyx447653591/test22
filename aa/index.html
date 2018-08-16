@@ -12,6 +12,7 @@
 <link rel='stylesheet' href='css/55c16dc00001fa1a00000000.css' />
 <link rel='stylesheet' href='css/55c16dda0001113100000000.css' />
 
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/55ac9a860001a6c500000000.js">
 </script>
 <script type="text/javascript" src="js/55ac9ea30001ace700000000.js"></script>
@@ -20,6 +21,8 @@
 </head>
 
 <body>
+    <audio src="music/circulation.mp3" loop="loop" preload id="audio"></audio>
+
 <div id='content'>
     <ul class='content-wrap'>
         <!-- 第一副画面 -->
@@ -93,4 +96,11 @@
 </div>
 
 </body>
+<script>
+      document.getElementById('audio').play();
+   document.addEventListener("WeixinJSBridgeReady", function() {
+    // 音乐自动播放
+        document.getElementById('audio').play();
+   }, false);
+    </script>
 </html>
